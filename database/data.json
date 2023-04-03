@@ -1,0 +1,30 @@
+{
+  "user": [
+    {
+      "age": "[object Object]",
+      "name": "Mrujjj",
+      "id": 1
+    },
+    {
+      "name": "23",
+      "age": "sd",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "appa",
+      "age": 23
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "name": "mruuuu",
+      "age": "eer",
+      "id": 8
+    }
+  ]
+}
