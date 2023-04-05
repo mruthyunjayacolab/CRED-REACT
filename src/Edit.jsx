@@ -7,9 +7,9 @@ const Edit = () => {
     let { id } = useParams()
     console.log(id)
 
-
     let [name, setname] = useState('');
     let age = useRef()
+// ====================Fectiching ---------------------------------------
 
     useEffect(() => {
         fetch(`http://localhost:3000/user/${id}`)
@@ -22,7 +22,8 @@ const Edit = () => {
 
     }, [])
 
-
+    
+//=======================================================================
     let sub = (e) => {
         e.preventDefault()
         let data={
@@ -30,32 +31,30 @@ const Edit = () => {
             name:name,
             age: age.current.value
         }
-        
-        fetch(`http://localhost:3000/user/${id}`,
 
+        fetch(`http://localhost:3000/user/${id}`,
             {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             }
-
-
         )
         alert('success')
-
     }
-
+//=======================================================================
     return (
         <div className="edit">
             <h1> Edite :{id}</h1>
 
+
+
             <form action="" onSubmit={sub} >
 
-                <input type="text" value={name} onChange={(e) => setname(e.target.value)} />
-                <input type="text"  ref={age} />
+            <input type="text" value={name} onChange={(e) => setname(e.target.value)} />
+            <input type="text"  ref={age} />
                 <button type="submit"> Edited</button>
             </form>
-            <input type="text" value={name} onChange={(e) => setname(e.target.value)} />
+            <input type="text" value={name} onChange={(e) => setname(e.target.value)} />    
 
             <h1>{name}</h1>
 
